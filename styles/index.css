@@ -115,6 +115,23 @@ li {
     border-radius: 8px;
 }
 
+#hero_section_info_container {
+    display: flex;
+    flex-flow: column;
+}
+
+#brand_carousel {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 73px;
+    padding: 85px 0px;
+}
+
+#brand_carousel>img {
+    width: 196px;
+}
+
 
 
 @media (min-width: 640px) {}
