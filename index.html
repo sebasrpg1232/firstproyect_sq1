@@ -69,6 +69,151 @@
         <img src="./assets/calvinklein.png" alt="Calvin Klein" />
         <img src="./assets/denim.png" alt="Denim" />
       </section>
+      <section id="featured_products_container">
+        <h1>New Arrivals</h1>
+        <p>
+          Discover our exciting new arrivals, featuring the latest trends and
+          styles to
+          <br />
+          refresh your wardrobe this season.
+        </p>
+        <menu id="featured_products_Actions">
+          <button class="featured_products_button" id="men_fashion_action">
+            Men's Fashion
+          </button>
+          <button
+            class="featured_products_button featured_products_button_active"
+            id="women_fashion_action"
+          >
+            Women's Fashion
+          </button>
+          <button
+            class="featured_products_button"
+            id="women_accessories_action"
+          >
+            Women Accessories
+          </button>
+          <button class="featured_products_button" id="men_accessories_action">
+            Men's Accessories
+          </button>
+          <button class="featured_products_button" id="discount_deals_action">
+            Discount Deals
+          </button>
+        </menu>
+        <article id="featured_products">
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+          <div class="featured_product_card">
+            <img
+              src="./assets/product.png"
+              alt="product-img-1"
+              style="width: 100%"
+            />
+            <h2>Chaqueta de lana</h2>
+            <span>Gucci</span>
+            <p>$95.50<span>$95.50</span></p>
+            <div class="color_circle" data-tooltip="Gris"></div>
+            <button class="addcart_button_action">Comprar</button>
+          </div>
+        </article>
+        <div>
+          <button id="more_content_action">View More</button>
+        </div>
+      </section>
     </main>
   </body>
+  <script>
+    const buttons = document.querySelectorAll(".featured_products_button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) =>
+          btn.classList.remove("featured_products_button_active")
+        );
+        button.classList.add("featured_products_button_active");
+      });
+    });
+  </script>
 </html>
