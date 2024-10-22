@@ -78,25 +78,19 @@
           refresh your wardrobe this season.
         </p>
         <menu id="featured_products_Actions">
-          <button class="featured_products_button" id="men_fashion_action">
+          <button class="button_primary" id="men_fashion_action">
             Men's Fashion
           </button>
-          <button
-            class="featured_products_button featured_products_button_active"
-            id="women_fashion_action"
-          >
+          <button class="button_secondary" id="women_fashion_action">
             Women's Fashion
           </button>
-          <button
-            class="featured_products_button"
-            id="women_accessories_action"
-          >
+          <button class="button_primary" id="women_accessories_action">
             Women Accessories
           </button>
-          <button class="featured_products_button" id="men_accessories_action">
+          <button class="button_primary" id="men_accessories_action">
             Men's Accessories
           </button>
-          <button class="featured_products_button" id="discount_deals_action">
+          <button class="button_primary" id="discount_deals_action">
             Discount Deals
           </button>
         </menu>
@@ -111,7 +105,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -123,7 +117,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -135,7 +129,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -147,7 +141,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -159,7 +153,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -171,7 +165,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -183,7 +177,7 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
           <div class="featured_product_card">
             <img
@@ -195,24 +189,73 @@
             <span>Gucci</span>
             <p>$95.50<span>$95.50</span></p>
             <div class="color_circle" data-tooltip="Gris"></div>
-            <button class="addcart_button_action">Comprar</button>
+            <button class="button_tertiary">Comprar</button>
           </div>
         </article>
         <div>
-          <button id="more_content_action">View More</button>
+          <button class="button_secondary" id="more_content_action">
+            View More
+          </button>
+        </div>
+      </section>
+      <section id="promotion_container">
+        <div id="promotion_info">
+          <span>Extra 30% Off Online</span>
+          <h2>Summer Season Sale</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            vel dolor
+            <br />
+            pellentesque, varius elit quis, malesuada quam.
+          </p>
+          <button class="button_secondary">Shop Now</button>
+        </div>
+      </section>
+      <section id="indicators">
+        <div class="indicator_card">
+          <img src="/assets/highquality.svg" />
+          <div class="indicator_card_info">
+            <h3>High Quality</h3>
+            <span>crafted from top materials</span>
+          </div>
+        </div>
+        <div class="indicator_card">
+          <img src="/assets/warantyprotection.svg" />
+          <div class="indicator_card_info">
+            <h3>Warranty Protection</h3>
+            <span>Over 2 years</span>
+          </div>
+        </div>
+        <div class="indicator_card">
+          <img src="/assets/freeshipping.svg" />
+          <div class="indicator_card_info">
+            <h3>Free Shipping</h3>
+            <span>Order Over 150 $</span>
+          </div>
+        </div>
+        <div class="indicator_card">
+          <img src="/assets/support.svg" />
+          <div class="indicator_card_info">
+            <h3>24 / 7 Support</h3>
+            <span>Dedicated support</span>
+          </div>
         </div>
       </section>
     </main>
   </body>
   <script>
-    const buttons = document.querySelectorAll(".featured_products_button");
+    const buttons = document.querySelectorAll(
+      "#featured_products_Actions button"
+    );
 
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
-        buttons.forEach((btn) =>
-          btn.classList.remove("featured_products_button_active")
-        );
-        button.classList.add("featured_products_button_active");
+        buttons.forEach((btn) => {
+          btn.classList.remove("button_secondary");
+          btn.classList.add("button_primary");
+        });
+        button.classList.remove("button_primary");
+        button.classList.add("button_secondary");
       });
     });
   </script>
