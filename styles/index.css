@@ -420,7 +420,27 @@ li {
     font-weight: 100;
 }
 
+footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border: none;
+    border-top: 1px solid #DEDFE1;
+    padding: 40px 120px;
+}
 
+#footer_nav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+#footer_nav>a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #484848;
+    transition: color 0.3s ease;
+}
 
 @media (min-width: 640px) {}
 
